@@ -1,10 +1,11 @@
-<div *ngFor=" let user of users" class="card" style="width: 13rem; display: inline-block; margin: 10px">
-  <img class="card-img-top" src="{{user.avatar}}" alt="Card image cap">
-  <div class="card-body">
-    <p class="card-text">
-        {{user.first_name + ' ' + user.last_name}}
-    </p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-    <strong>{{user.id}}</strong>
+<div class="card-columns">
+  <div *ngFor=" let user of users" class="card">
+    <img class="card-img-top" src="{{user.avatar}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{user.first_name + ' ' + user.last_name}}</h5>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <small class="text-muted"><cite title="Source Title">id: {{user.id}}</cite>
+      </small>
+    </div>
   </div>
 </div>
