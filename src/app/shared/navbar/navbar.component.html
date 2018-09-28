@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <a class="navbar-brand" [routerLink]="['/home']">effects</a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <ul class="navbar-nav mr-auto">
+      <!-- routerLinkActive="active" para que quede activado cuando erstoy en esa ruta -->
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/home']">Home</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/usuario', 1]">Usuario</a>
+      </li>
+    </ul>
+
+    <div class="form-inline my-2 my-lg-0">
+      <!-- #txtinput referencia fisica -->
+      <!-- para que cuando presione enter, me ejecute esa funcion -->
+      <input #txtinput (keyup.enter)="irUsuario( txtinput.value )" class="form-control mr-sm-2" type="search" placeholder="ID usuario">
+      <!-- (click)="irUsuario( txtinput.value )" evento click que estara pendiente de txtinput.value -->
+      <button (click)="irUsuario( txtinput.value )" class="btn btn-outline-success my-2 my-sm-0" type="button">Buscar</button>
+    </div>
+  </div>
+</nav>
