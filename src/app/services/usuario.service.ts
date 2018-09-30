@@ -14,7 +14,7 @@ export class UsuarioService {
 
   getUsers(){
 
-    return this._http.get(`${ this.url }/users?per_page=6`)//&delay=1 para que tarde 1 segundo en aparecer
+    return this._http.get(`${ this.url }/users?per_page=20`)//&delay=1 para que tarde 1 segundo en aparecer
     .pipe(
       map( resp =>resp['data'])//para filtrar que solamente me reciba la data y no el resto de informacion que recibe del api
 
