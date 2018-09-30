@@ -5,8 +5,10 @@ import { ActionReducerMap } from '@ngrx/store';
 //de esta forma va a lucir mi AppState
 export interface AppState {
     usuarios: reducers.UsuariosState;
+    usuario: reducers.UsuarioState;
 }
 
 export const appReducers: ActionReducerMap<AppState> = {
-    usuarios: reducers.usuariosReducer
+    usuarios: reducers.usuariosReducer,
+    usuario: reducers.usuarioReducer
 };
